@@ -5,7 +5,7 @@
  *
  * @author Daniel
  */
-namespace fanap\login\app\model\domain\interfaces\UserRepository;
+namespace fanap\login\app\model\domain\interfaces;
 
 class UserRepository implements IUserRepository {
 

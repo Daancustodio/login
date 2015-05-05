@@ -1,22 +1,24 @@
 <?php
 
-//namespace fanap\login\Autoload;
+namespace fanap\login;
 
-function loadBibliotecas($className) 
+class AutoLoad{
+
+public static function Register (){
+    spl_autoload_register(function ($className) 
 {
-    //echo ('passou');
-    //echo ($className);
     $logicalPath = str_replace('\\', '/', $className);
-    //echo ($logicalPath);
-    $fullPath = __DIR__ . '/' . $logicalPath . '.php';
-    $fullPath2 = __DIR__ . '/' . $logicalPath . '.class.php';
-    var_dump($fullPath);
-    var_dump($fullPath2);
-    if (file_exists($fullPath)) {
-       //echo ($fullPath . 'Encontrou');
-        require_once $fullPath;
+    $fullPath = __DIR__ . substr($logicalPath,11) . '.php';
+    $fullPath2 = '/' . $logicalPath . '.php';
+    $fullPath = str_replace('\\', '/', $fullPath);
+    //var_dump($fullPath); 
+    //var_dump(__DIR__);
+    //var_dump($fullPath2);       
+    if (file_exists($fullPath)) {   
+       include_once ($fullPath);
     }elseif (file_exists($fullPath2)) {
-        require_once $fullPath2;
+        include_once $fullPath2;
     }
+});
 }
-spl_autoload_register('loadBibliotecas');
+}

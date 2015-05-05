@@ -6,7 +6,7 @@
  *
  * @author Daniel
  */
-namespace fanap\login\app\model\domain\repository\Connection;
+namespace fanap\login\app\model\domain\repository;
 class Connection {
 
     private static $server = 'localhost';

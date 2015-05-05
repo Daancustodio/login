@@ -3,7 +3,7 @@
  *
  * @author Daniel
  */
-namespace fanap\login\app\model\domain\interfaces\IUserRepository;
+namespace fanap\login\app\model\domain\interfaces;
 
 interface IUserRepository {
     function BuscarPorId($id);

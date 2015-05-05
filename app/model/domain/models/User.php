@@ -6,8 +6,13 @@
  * @author Daniel
  */
 namespace fanap\login\app\model\domain\models;
+require_once dirname(__FILE__) . '/../../../../AutoLoader.php';
+use fanap\login\AutoLoad;
+AutoLoad::Register();
 
-class User {
+use fanap\login\app\model\domain\interfaces\IUser;
+
+class User implements IUser{
 
     private $id = null;
     private $login = null;
