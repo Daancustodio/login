@@ -15,9 +15,13 @@ AutoLoad::Register();
 //var_dump(file_exists($pah));
 //var_dump(include ($pah));
 use \fanap\login\app\model\domain\models\User;
+use \fanap\login\app\model\domain\repository\UserRepository;
 var_dump(\get_included_files());
-$user = new User("login","senhaa",1,"Nome Sobrenome");
+$user = new User("novo login","sss",1,"custodio");
 
-//$userRepository = new UserRepository();
+$userRepository = new UserRepository();
+
+//$userRepository->Inserir($user);
+var_dump($userRepository->BuscarTodos());
 
 //$userRepository->Inserir($user);

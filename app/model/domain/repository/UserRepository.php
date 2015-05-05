@@ -5,7 +5,14 @@
  *
  * @author Daniel
  */
-namespace fanap\login\app\model\domain\interfaces;
+namespace fanap\login\app\model\domain\repository;
+
+require_once dirname(__FILE__) . '/../../../../AutoLoader.php';
+use fanap\login\AutoLoad;
+AutoLoad::Register();
+
+use fanap\login\app\model\domain\interfaces\IUserRepository;
+use fanap\login\app\model\domain\interfaces\IUser;
 
 class UserRepository implements IUserRepository {
 
@@ -14,22 +21,16 @@ class UserRepository implements IUserRepository {
     }
 
     public function BuscarTodos() {
-        
+        return Connection::Query('select * from user')->fetch_all();
     }
 
     public function Inserir(IUser $user) {
         $con = Connection::ObtenhaConexao();
-        $stmt = $con->prepare("INSERT INTO user (nome, login, senha, tipo)VALUES (:nome,:login,:senha, :tipo)");
-
-        $stmt->bind_param(array("nome" => $user->getNome(),
-            "login" => $user->getLogin(),
-            "senha" => $user->getSenha(),
-            "tipo" => $user->getTipo()));
-
-
-        $stmt->execute();
-
-        $stmt->close();
+        
+        $query = "INSERT INTO user (nome, login, senha, tipo) VALUES ('" . $user->getNome() . "','" . $user->getLogin() . "','" . $user->getSenha() . "'," . $user->getTipo() . ")";
+        
+        var_dump($query);
+        return $con->Query($query);        
     }
 
     public function Remover(IUser $user) {

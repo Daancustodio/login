@@ -27,15 +27,15 @@ class User implements IUser{
         $this->nome = $nome;
     }
     
-    function getLogin() {
+    public function getLogin() {
         return $this->login;
     }
 
-    function getSenha() {
+    public function getSenha() {
         return $this->senha;
     }
 
-    function getTipo() {
+    public function getTipo() {
         return $this->tipo;
     }
 

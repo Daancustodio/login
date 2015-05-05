@@ -7,6 +7,8 @@
  * @author Daniel
  */
 namespace fanap\login\app\model\domain\repository;
+use \mysqli;
+
 class Connection {
 
     private static $server = 'localhost';
@@ -24,7 +26,7 @@ class Connection {
             self::$con = new mysqli(self::$server, self::$user, self::$pass, self::$db);
 
             if (self::$con->connect_errno) {
-                printf("Connect failed: %s\n", msqli_connect_error());
+                var_dump("Connect failed: %s\n", msqli_connect_error());
                 exit();
             }
         }
@@ -32,11 +34,11 @@ class Connection {
     }
 
     public static function Query($SqlQuery) {
-        return self::ObtenhaConexao()->query($SqlQuery);
-        //var_dump($result->fetch_all());
+        $result = self::ObtenhaConexao()->Query($SqlQuery);
+        return $result;
     }
 
 }
 
-Connection::Query("Select * from user");
+
 
