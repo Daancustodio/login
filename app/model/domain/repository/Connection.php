@@ -34,8 +34,7 @@ class Connection {
     }
 
     public static function Query($SqlQuery) {
-        $result = self::ObtenhaConexao()->Query($SqlQuery);
-        return $result;
+        self::ObtenhaConexao()->Query($SqlQuery);        
     }
 
 }

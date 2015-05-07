@@ -6,6 +6,7 @@
  * @author Daniel
  */
 namespace fanap\login\app\model\domain\common;
+use Exception;
 
 class Validacao {
     public static function TamanhoMinimo($stringValor, $tamanhoMinimo, $nomeDoCampo) {
