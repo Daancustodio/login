@@ -34,7 +34,7 @@ class UserRepository implements IUserRepository {
     }
 
     public static function BuscarTodos() {
-        return Connection::ObtenhaConexao()->Query('select * from user')->fetch_all();
+        return Connection::ObtenhaConexao()->Query('select * from user')->fetch_all(MYSQLI_ASSOC);
     }
 
     public static function Inserir(User $user) {
