@@ -51,8 +51,10 @@ class Access {
     }
     
     private function CreateSession(){
+        ob_start();
         session_start();
-        $_SESSION['user'] = $this->user;
+        $_SESSION['user'] = $this->user;  
+                
     }
     
     private function DestroiSession(){

@@ -8,10 +8,15 @@ use fanap\login\AutoLoad;
 
 AutoLoad::Register();
 
-use fanap\login\app\controller\CadastroController;
+use fanap\login\app\controller\AccessController;
+
+if (isset($_GET['action']) && $_GET['action'] == 'cadastrar') {
+
+    $cadastroController = new AccessController();
+    $cadastroController->Cadastrar();
+}
+
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -43,13 +48,3 @@ use fanap\login\app\controller\CadastroController;
     </body>
 </html>
 
-<?php
-if (isset($_GET['action']) && $_GET['action'] == 'cadastrar') {
-    try {
-        $cadastroController = new CadastroController();
-        var_dump('pass');
-        $cadastroController->Cadastrar();
-    } catch (Exception $exc) {
-        echo $exc->getMessage();
-    }
-}

@@ -12,7 +12,6 @@ use fanap\login\AutoLoad;
 AutoLoad::Register();
 
 use fanap\login\app\model\domain\interfaces\IUserRepository;
-use fanap\login\app\model\domain\interfaces\IUser;
 use fanap\login\app\model\domain\entidades\User;
 use Exception;
 

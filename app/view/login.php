@@ -1,3 +1,20 @@
+<?php
+
+namespace fanap\login\view;
+
+require_once dirname(__FILE__) . '/../../AutoLoader.php';
+
+use fanap\login\AutoLoad;
+use fanap\login\app\controller\AccessController;
+AutoLoad::Register();
+
+if (isset($_GET['action']) && $_GET['action'] == 'acessar') {
+
+    $cadastroController = new AccessController();
+    $cadastroController->Acessar();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +24,8 @@
 <body>
 
 <div id="form">
-	<h3>Cadastro de usuario comum</h3>
-	<form action="?action=login" method="post">
+	<h3>Login</h3>
+	<form action="?action=acessar" method="post">
 		<p>
 			Usuario:<br /><input type="text" id="usuario" name="login" class="text">
 		</p>
@@ -17,7 +34,7 @@
 		</p>
 		<input type="submit" name="entrar" value="Entrar">
 	</form>
-	<a href="?action=cadastro" title="Cadastre-se">Cadastro</a>
+	<a href="?action=cadastro" title="Cadastre-se">Login</a>
 </div>
 	
 </body>

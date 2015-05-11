@@ -12,10 +12,12 @@ require_once dirname(__FILE__) . '/../../AutoLoader.php';
 
 use fanap\login\AutoLoad;
 use fanap\login\app\model\domain\services\UserService;
+use fanap\login\app\model\domain\services\AcessService;
 
 AutoLoad::Register();
-
-class CadastroController {
+// Configuração para Exibir Erros Gerados
+use Exception;
+class AccessController {
 
     function Cadastrar() {
 
@@ -27,9 +29,25 @@ class CadastroController {
                 echo 'Cadastro realizado!';
             }
         } catch (Exception $exc) {
-            echo 'capturei';
             echo $exc->getMessage();
         }
+    }
+    
+    function Acessar() {
+        try {
+            $us = new UserService();
+            $user = $us->Autenticar($_POST['login'], $_POST['senha']);
+
+            if ($user) {
+                $acess = new AcessService();
+                $acess->LogIn($user);
+                header('Location: ../view/logado.php');    
+                
+            }
+        } catch (Exception $exc) {
+            echo $exc->getMessage();
+        }
+            
     }
 
 }
