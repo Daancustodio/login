@@ -61,13 +61,6 @@ class UserService implements IUserService {
 
     public function Registrar($login, $senha, $tipo, $nome) {
         try {
-            
-            $userExist = UserRepository::BuscarPorLogin($login);
-            
-            if($userExist){
-                throw new Exception("Login indisponível");
-            }
-            
             $user = new User($login, $senha, $tipo, $nome);
             $user->ValidacoesImpeditivas();
 
@@ -75,9 +68,5 @@ class UserService implements IUserService {
         } catch (Exception $exc) {
             echo $exc->getMessage();
         }
-    }
-    
-    public function BuscarTodos(){
-        return UserRepository::BuscarTodos();
     }
 }
