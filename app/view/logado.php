@@ -1,17 +1,17 @@
 <?php
 
 namespace fanap\login\app\view;
-session_start();
-require_once dirname(__FILE__) . '/../../AutoLoader.php';
 
+require_once dirname(__FILE__) . '/../../AutoLoader.php';
+session_start();
 use fanap\login\AutoLoad;
 use fanap\login\app\model\domain\entidades\User;
 AutoLoad::Register();
+$session = unserialize($_SESSION['user']);
 
-var_dump($_SESSION['user']);
-if (isset($_SESSION['user'])){
+if (isset($session)){
     
-   $_SESSION['user']->getNome();
+   echo $session->getNome();
     
 }
 
