@@ -14,7 +14,6 @@ if (isset($session)){
     
     $userService = new UserService();
     $users = $userService->BuscarTodos();
-    var_dump($users);
     echo ViewAccess::CriarTabelaAprovacoes($session, $users);
     
 }

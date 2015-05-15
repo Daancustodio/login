@@ -34,7 +34,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'acessar') {
 		</p>
 		<input type="submit" name="entrar" value="Entrar">
 	</form>
-	<a href="?action=cadastro" title="Cadastre-se">Login</a>
+	<a href="cadastro.php" title="Cadastre-se">Cadastre-se</a>
 </div>
 	
 </body>

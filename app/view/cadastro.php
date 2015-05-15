@@ -42,7 +42,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'cadastrar') {
                 </p>
                 <input type="submit" name="cadastrar" value="Cadastrar">
             </form>
-
+            <a href="login.php" title="Acessar">Acessar</a>
         </div>
 
     </body>
