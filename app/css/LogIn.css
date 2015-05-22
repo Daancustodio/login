@@ -1,0 +1,157 @@
+﻿body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: "small";
+	color: #777;
+}
+
+/* Stylesheet */
+
+
+/* Imports */
+
+@import url(animate.css);
+
+/****************  Tela de LogIn  **********************/
+
+::selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #444;
+}
+
+::-moz-selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #444;
+}
+
+#container {
+    color:black;
+	position: fixed;
+	width: 340px;
+	height: auto;
+	top: 51%;
+	left: 50%;
+	margin-top: -140px;
+	margin-left: -170px;
+	border-radius: 1px;
+	border: 1px solid #F9CD9D;
+	box-shadow: 0 1px 2px rgba(254, 191, 2, .5);
+	-webkit-animation-name: bounceIn;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: bounceIn;
+	-moz-animation-fill-mode: both;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	animation-name: bounceIn;
+	animation-fill-mode: both;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	background: #FFFFFF;
+}
+
+input[type=name],
+input[type=password] {
+	color: #777;
+	padding-left: 10px;
+	margin: 10px;
+	margin-top: 5px;
+	margin-left: 18px;
+	width: 290px;
+	height: 25px;
+	border: 1px solid #F9CD9D;
+	border-radius: 2px;
+	box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .4), 0 0 0 5px #f5f7f8;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+input[type=name]:hover,
+input[type=password]:hover {
+	border: 1px solid #CC9933;
+	box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .7), 0 0 0 5px #FFFFCC;
+}
+
+input[type=name]:focus,
+input[type=password]:focus {
+	border: 1px solid #CC9933;
+	box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .4), 0 0 0 5px #FFFFCC;
+}
+
+#lower {
+	width: 100%;
+	height: 69px;
+	margin-top: 20px;
+	box-shadow: inset 0 1px 1px #fff;
+	border-top: 1px solid #F9CD9D;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+	background-color: #FFFFFF;
+}
+
+input[type=checkbox] {
+	margin-left: 20px;
+	margin-top: 30px;
+		
+}
+
+.texto {
+	margin-left: 18px;
+	font-size: 14px;
+	color: #444;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.dropDownList {
+    
+    color: #777;
+    vertical-align:middle;
+	padding-left: 10px;   
+	margin: 10px;
+	margin-top: 5px;
+	margin-left: 18px;
+	width: 304px;
+	height: 25px;
+	border: 1px solid #F9CD9D;
+	border-radius: 2px;
+	box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .4), 0 0 0 5px #f5f7f8;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.button {
+    float: right;
+	margin-right: 20px;
+	margin-top: 15px;
+    margin-bottom: 20px;
+	width: 80px;
+	height: 30px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #333333;	
+	border-radius: 5px;
+	border: 1px solid #aaa;	
+	cursor: pointer;
+    background-color: #fbac09;
+}
+.button:focus{
+	border: 1px solid #CC9933;
+	box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .4), 0 0 0 5px #FFFFCC;
+}
+.button:hover {
+background-color: #fbac09;
+background-image: -moz-linear-gradient(#, #ef8108);
+background-image: -webkit-gradient(linear, left top, left bottom, from(#fbac09), to(#ef8108));
+background-image: -webkit-linear-gradient(#fbac09, #ef8108);
+background-image: -o-linear-gradient(#fbac09, #ef8108);
+background-image: -ms-linear-gradient(#fbac09, #ef8108);
+background-image: linear-gradient(#fbac09, #ef8108);
+}
+
