@@ -1,0 +1,16 @@
+/*[Nome = Raphael freitas]*/
+.modalBackground{
+    background-color: black;
+    filter: alpha(opacity=90);
+    opacity: 0.8;
+}
+.modalPopUp{
+    background-color: #FFFFFF;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    border-radius:5px;
+    padding-top: 10px;
+    width: 300px;
+    height: 140px;
+}
