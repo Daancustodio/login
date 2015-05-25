@@ -20,21 +20,24 @@ if (isset($_GET['action']) && $_GET['action'] == 'acessar') {
 <head>
 	<meta charset="UTF-8">
 	<title>Login</title>
+	<link rel="stylesheet" href="http://localhost:81/login-master/app/css/style.css" >
+	<link rel="stylesheet" href="http://localhost:81/login-master/app/css/Styles.css" >
+	<link rel="stylesheet" href="http://localhost:81/login-master/app/css/LogIn.css" >
 </head>
 <body>
 
-<div id="form">
+<div id="container">
 	<h3>Login</h3>
 	<form action="?action=acessar" method="post">
 		<p>
-			Usuario:<br /><input type="text" id="usuario" name="login" class="text">
+			Usuario:<br /><input type="text" id="usuario" name="login" />
 		</p>
 		<p>
-			Senha:<br /><input type="password" id="senha" name="senha" class="text">
+			Senha:<br /><input type="password" id="senha" name="senha">
 		</p>
-		<input type="submit" name="entrar" value="Entrar">
+		<input type="submit" name="entrar" value="Entrar" width="150px" class="button">
 	</form>
-	<a href="cadastro.php" title="Cadastre-se">Cadastre-se</a>
+	<a href="cadastro.php" title="Cadastre-se" class="button" style="float:left; height:15px;">Cadastre-se</a>
 </div>
 	
 </body>

@@ -21,11 +21,14 @@ if (isset($_GET['action']) && $_GET['action'] == 'cadastrar') {
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Login</title>
+        <title>Cadastro</title>
+		<link rel="stylesheet" href="http://localhost:81/login-master/app/css/style.css" >
+	<link rel="stylesheet" href="http://localhost:81/login-master/app/css/Styles.css" >
+	<link rel="stylesheet" href="http://localhost:81/login-master/app/css/LogIn.css" >
     </head>
     <body>
 
-        <div id="form">
+        <div id="container">
             <h3>Cadastro de usuario</h3>
             <form action="?action=cadastrar" method="post">
                 <p>
@@ -40,9 +43,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'cadastrar') {
                 <p>
                     Confirmar Senha:<br /><input type="password" id="confirmacao" name="confirmacao" class="text">
                 </p>
-                <input type="submit" name="cadastrar" value="Cadastrar">
+                <input type="submit" name="cadastrar" value="Cadastrar" class="button" >
             </form>
-            <a href="login.php" title="Acessar">Acessar</a>
+            <a href="login.php" title="Acessar" class="button" style="float:left; height:15px;">Acessar</a>
         </div>
 
     </body>

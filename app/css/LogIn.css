@@ -1,15 +1,12 @@
-﻿body {
+body {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-size: "small";
 	color: #777;
 }
+h1,h2,h3,h4,h5,h6{
+	text-align: center;
+}
 
-/* Stylesheet */
-
-
-/* Imports */
-
-@import url(animate.css);
 
 /****************  Tela de LogIn  **********************/
 
@@ -34,8 +31,8 @@
 	left: 50%;
 	margin-top: -140px;
 	margin-left: -170px;
-	border-radius: 1px;
-	border: 1px solid #F9CD9D;
+	border-radius: 5px;
+	border: 1px solid blue;
 	box-shadow: 0 1px 2px rgba(254, 191, 2, .5);
 	-webkit-animation-name: bounceIn;
 	-webkit-animation-fill-mode: both;
@@ -55,14 +52,14 @@
 	background: #FFFFFF;
 }
 
-input[type=name],
+input[type=text],
 input[type=password] {
 	color: #777;
 	padding-left: 10px;
 	margin: 10px;
 	margin-top: 5px;
 	margin-left: 18px;
-	width: 290px;
+	<!--width: 290px;-->
 	height: 25px;
 	border: 1px solid #F9CD9D;
 	border-radius: 2px;
@@ -135,11 +132,11 @@ input[type=checkbox] {
 	height: 30px;
 	font-size: 12px;
 	font-weight: normal;
-	color: #333333;	
+	color: white;	
 	border-radius: 5px;
 	border: 1px solid #aaa;	
 	cursor: pointer;
-    background-color: #fbac09;
+    background-color: blue;
 }
 .button:focus{
 	border: 1px solid #CC9933;
