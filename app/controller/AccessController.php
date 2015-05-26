@@ -15,7 +15,6 @@ use fanap\login\app\model\domain\services\UserService;
 use fanap\login\app\model\domain\services\AcessService;
 
 AutoLoad::Register();
-// Configuração para Exibir Erros Gerados
 use Exception;
 class AccessController {
 
