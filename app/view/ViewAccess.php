@@ -15,7 +15,22 @@ AutoLoad::Register();
  * @author Daniel
  */
 class ViewAccess {
-    
+    public static function GetHeader(){
+        $header = '
+        <!DOCTYPE html>
+        <html lang="pt-br">
+            <head>
+                <meta charset="UTF-8">
+                <title>Cadastro</title>
+        		<link rel="stylesheet" href="../css/style.css" >
+        	<link rel="stylesheet" href="../css/Styles.css" >
+        	<link rel="stylesheet" href="../css/LogIn.css" >
+            </head>
+            <body>
+        <div id="container">';
+        
+        return $header;
+    }
     public static function CriarTabelaAprovacoes(User $userLoged, $arrayOfUsers){
         if($userLoged->getTipo() == 3){
             $thead = '<table border ="1">
@@ -90,7 +105,15 @@ class ViewAccess {
             return $thead . $body . '</tbody></table>';        
              
         }
-    }    
+    } 
+    
+    public static function GetFooter(){
+        $footer ='</div>
+                	
+                </body>
+                </html>';
+                return $footer;
+    }   
     
    
 }

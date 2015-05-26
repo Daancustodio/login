@@ -18,31 +18,35 @@ if (isset($_GET['action']) && $_GET['action'] == 'cadastrar') {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>Login</title>
+        <title>Cadastro</title>
+		<link rel="stylesheet" href="../css/style.css" >
+	<link rel="stylesheet" href="../css/Styles.css" >
+	<link rel="stylesheet" href="../css/LogIn.css" >
     </head>
     <body>
 
-        <div id="form">
+        <div id="container">
             <h3>Cadastro de usuario</h3>
-            <form action="?action=cadastrar" method="post">
+            
+            <form action="?action=cadastrar" method="post" style="margin-left:18px;">
                 <p>
-                    Nome:<br /><input type="text" id="nome" name="nome" class="text">
+                    Nome:<br /><input type="text" id="nome" name="nome" class="text" required>
                 </p>
                 <p>
-                    Login:<br /><input type="text" id="usuario" name="login" class="text">
+                    Login:<br /><input type="text" id="usuario" name="login" class="text" required>
                 </p>
                 <p>
-                    Senha:<br /><input type="password" id="senha" name="senha" class="text">
+                    Senha:<br /><input type="password" id="senha" name="senha" class="text" required>
                 </p>
                 <p>
-                    Confirmar Senha:<br /><input type="password" id="confirmacao" name="confirmacao" class="text">
+                    Confirmar Senha:<br /><input type="password" id="confirmacao" name="confirmacao" class="text" required>
                 </p>
-                <input type="submit" name="cadastrar" value="Cadastrar">
+                <input type="submit" name="cadastrar" value="Cadastrar" class="button" >
             </form>
-            <a href="login.php" title="Acessar">Acessar</a>
+            <a href="login.php" title="Acessar" class="button" style="float:left; height:15px; margin-left:18px;">Acessar</a>
         </div>
 
     </body>

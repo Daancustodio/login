@@ -160,7 +160,7 @@ background-image: linear-gradient(#ebe9e9, #aaa);
             border: 1px solid #aaa;
             cursor: pointer;
             Height:30px;
-    width: 29px;
+    <!-- width: 29px;-->
 }
 
             .botao:focus {
