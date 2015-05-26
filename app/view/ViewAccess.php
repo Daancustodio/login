@@ -22,9 +22,10 @@ class ViewAccess {
             <head>
                 <meta charset="UTF-8">
                 <title>Cadastro</title>
-        		<link rel="stylesheet" href="../css/style.css" >
+        	<link rel="stylesheet" href="../css/style.css" >
         	<link rel="stylesheet" href="../css/Styles.css" >
         	<link rel="stylesheet" href="../css/LogIn.css" >
+                <script src="../js/jquery-2.1.4.min.js"></script>
             </head>
             <body>
         <div id="container">';
@@ -33,7 +34,7 @@ class ViewAccess {
     }
     public static function CriarTabelaAprovacoes(User $userLoged, $arrayOfUsers){
         if($userLoged->getTipo() == 3){
-            $thead = '<table border ="1">
+            $thead = '<table>
                     <caption>Controle de aprocação</caption>
                     <thead>
                         <tr>
@@ -51,9 +52,9 @@ class ViewAccess {
                 $body = $body . '<tr>
 			<td>' .  $user["login"]  . '</td>
 			<td>' .  $user["nome"]  . '</td>
-			<td>Aprovar</td>
-			<td>Aprovar</td>
-			<td>Aprovar</td>
+			<td><a href="?action=aprovar&id=' . $user["id"] . '">Aprovar</a></td>
+			<td><a href="?action=aprovarGerente&id=' . $user["id"] . '">Aprovar</a></td>
+			<td><a href="?action=aprovarAdm&id=' . $user["id"] . '">Aprovar</a></td>
 		</tr>
                 ';
             }
@@ -61,7 +62,7 @@ class ViewAccess {
             return $thead . $body . '</tbody></table>';
             
         }elseif ($userLoged->getTipo() == 2) {
-            $thead = '<table border ="1">
+            $thead = '<table>
                     <caption>Controle de aprocação</caption>
                     <thead>
                         <tr>
@@ -76,14 +77,14 @@ class ViewAccess {
                 $body = $body . '<tr>
 			<td>' .  $user["login"]  . '</td>
 			<td>' .  $user["nome"]  . '</td>
-			<td>Aprovar</td>			
+			<td><a href="?action=aprovar&id=' . $user["id"] . '">Aprovar</a></td>			
 		</tr>
                 ';
             }
             
             return $thead . $body . '</tbody></table>';            
         }elseif ($userLoged->getTipo() == 1) {            
-            $thead = '<table border ="1">
+            $thead = '<table>
                     <caption>Controle de aprocação</caption>
                     <thead>
                         <tr>
@@ -97,8 +98,7 @@ class ViewAccess {
             foreach ($arrayOfUsers as $user) {
                 $body = $body . '<tr>
 			<td>' .  $user["login"]  . '</td>
-			<td>' .  $user["nome"]  . '</td>
-			<td>Aprovar</td>			
+			<td>' .  $user["nome"]  . '</td>						
 		</tr>
                 ';
             }            
@@ -108,8 +108,7 @@ class ViewAccess {
     } 
     
     public static function GetFooter(){
-        $footer ='</div>
-                	
+        $footer ='</div>                	
                 </body>
                 </html>';
                 return $footer;

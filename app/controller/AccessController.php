@@ -47,6 +47,7 @@ class AccessController {
             echo $exc->getMessage();
         }
             
-    }
+    }   
+    
 
 }

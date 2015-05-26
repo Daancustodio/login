@@ -44,7 +44,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'cadastrar') {
                 <p>
                     Confirmar Senha:<br /><input type="password" id="confirmacao" name="confirmacao" class="text" required>
                 </p>
-                <input type="submit" name="cadastrar" value="Cadastrar" class="button" >
+                <input type="submit" name="cadastrar" value="Cadastrar" class="button">
             </form>
             <a href="login.php" title="Acessar" class="button" style="float:left; height:15px; margin-left:18px;">Acessar</a>
         </div>

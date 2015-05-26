@@ -16,11 +16,17 @@ AutoLoad::Register();
 //var_dump(include ($pah));
 use \fanap\login\app\model\domain\models\User;
 use \fanap\login\app\model\domain\repository\UserRepository;
+use fanap\login\app\model\domain\services\UserService;
 var_dump(\get_included_files());
 $user = new User("novo login","sss",1,"custodio");
 
-$userRepository = new UserRepository();
+$userService = new UserService();
 
+
+
+$userRepository = new UserRepository();
+var_dump($userRepository->BuscarTodos());
+$userService->AlterarNivelDeAcesso(1, 3);
 //$userRepository->Inserir($user);
 var_dump($userRepository->BuscarTodos());
 

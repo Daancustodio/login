@@ -42,16 +42,17 @@ class UserService implements IUserService {
         if (!$user) {
             throw new Exception("Usuário não encontrado");
         }
-
         if ($user->getSenha() != $senha) {
             throw new Exception("Senha inválida");
         }
-
+        if(!$user->getTipo()){
+            throw new Exception("Usuário ainda não foi aprovado");
+        }
+        
         return $user;
     }
 
     public function BuscarPorLogin($login) {
-        Validacao::TamanhoMinimo($login, 3, "O login");
         return UserRepository::BuscarPorLogin($login);
     }
 
@@ -80,4 +81,17 @@ class UserService implements IUserService {
     public function BuscarTodos(){
         return UserRepository::BuscarTodos();
     }
+    
+    public function BuscarPendentes(){
+        return UserRepository::BuscarPendentes();
+    }
+
+    public function AlterarNivelDeAcesso($idUser, $tipoAcesso) {
+        $user = $this->BuscarPorId($idUser);
+        $user->AlterarNivelDeAcesso($tipoAcesso);
+        
+        return UserRepository::Modificar($user);
+        
+    }
+
 }

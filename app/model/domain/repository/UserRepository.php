@@ -18,7 +18,16 @@ use Exception;
 class UserRepository implements IUserRepository {
 
     public static function BuscarPorId($id) {
-        return Connection::ObtenhaConexao()->Query('select * from user where id = ' . $id . ' LIMIT 1');
+         $sql = 'select * from user where id = ' . $id . ' LIMIT 1';
+        
+        $user = Connection::ObtenhaConexao()->Query($sql)->fetch_object();
+        
+        if(!$user){
+            return false;
+        } 
+        
+        return new User($user->login, $user->senha, $user->tipo, $user->nome, $user->id);
+        
     }
     
     public static function BuscarPorLogin($login) {
@@ -27,7 +36,7 @@ class UserRepository implements IUserRepository {
         $user = Connection::ObtenhaConexao()->Query($sql)->fetch_object();
         
         if(!$user){
-            throw new Exception("Usuario não encontrado.");
+            return false;
         } 
         
         return new User($user->login, $user->senha, $user->tipo, $user->nome, $user->id);
@@ -35,6 +44,10 @@ class UserRepository implements IUserRepository {
 
     public static function BuscarTodos() {
         return Connection::ObtenhaConexao()->Query('select * from user')->fetch_all(MYSQLI_ASSOC);
+    }
+    
+    public static function BuscarPendentes() {
+        return Connection::ObtenhaConexao()->Query('select * from user where tipo = 0')->fetch_all(MYSQLI_ASSOC);
     }
 
     public static function Inserir(User $user) {

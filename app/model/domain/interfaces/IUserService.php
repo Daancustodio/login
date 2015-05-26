@@ -18,4 +18,11 @@ interface IUserService {
     function AlterarSenha($login, $senhaAtual, $novaSenha, $confirmacao);
 
     function AlterarNome($login, $novoNome);
+    
+    function AlterarNivelDeAcesso($idUser, $tipoAcesso);
+    
+    function BuscarTodos();
+    
+    function BuscarPendentes();
+    
 }

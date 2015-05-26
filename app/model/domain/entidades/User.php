@@ -75,5 +75,9 @@ class User {
 
         $this->senha = $novaSenha;
     }
+    
+    public function AlterarNivelDeAcesso($tipo){
+        $this->tipo = $tipo;
+    }
 
 }

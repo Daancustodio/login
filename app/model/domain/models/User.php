@@ -68,5 +68,9 @@ class User implements IUser{
 
         $this->senha = $novaSenha;    
     }
+    
+    public function AlterarTipoDeAcesso($nivel){
+        $this->tipo = $nivel;
+    }
 
 }
