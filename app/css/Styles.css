@@ -7,19 +7,63 @@ html, body {
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
    	color: #777;
 	-webkit-font-smoothing: antialiased;
-     background: url(../Img/bg1.png) no-repeat center center fixed;
+     
      background-size: cover; /*Css padrão*/
     -webkit-background-size: cover; /*Css safari e chrome*/
     -moz-background-size: cover; /*Css firefox*/
     -ms-background-size: cover; /*Css IE não use mer#^@%#*/
     -o-background-size: cover; /*Css Opera*/
 }  
-
-.form {
-    width: 960px;
-	margin: 0px auto;
+ 
+h1 {
+	text-align: center;
+	color: red;
 }
 
+thead{
+    background-color: cornflowerblue;
+}
+th{
+    width: 190px;
+    text-align: center;
+}
+caption{
+    text-align: center;
+    color: red;
+    font-size: 30px;
+}
+.form {
+    width: auto;
+	color:black;
+	position: fixed;
+	height: auto;
+	top: 51%;
+	left: 50%;
+	margin-top: -300px;
+	margin-left: -500px;
+	border-radius: 3px;
+	border: 1px solid blue;
+	box-shadow: 0 1px 2px rgba(254, 191, 2, .5);
+	-webkit-animation-name: bounceIn;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: bounceIn;
+	-moz-animation-fill-mode: both;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	animation-name: bounceIn;
+	animation-fill-mode: both;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	background: #FFFFFF;
+}
+.tabela {
+    margin-left: -50px;
+}
 fieldset {      
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -31,93 +75,6 @@ legend {
   font-size:90%
 
   }
-.numeric {
-     Height:24px;
-    color: black;
-    margin-top: 6px;
-    padding-left: 3px;
-    margin: 5px;
-    border: 1px solid #aaa;
-    border-radius: 2px;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    transition: all .4s ease;
-}
-.numeric:focus{
-	border: 1px solid #CC9933;
-	box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .4), 0 0 0 5px #FFFFCC;
-}
-.cep {
-     Height:24px;
-    color: black;
-    margin-top: 6px;
-    padding-left: 3px;
-    margin: 5px;
-    border: 1px solid #aaa;
-    border-radius: 2px;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    transition: all .4s ease;
-}
-.cep:focus{
-	border: 1px solid #CC9933;
-	box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .4), 0 0 0 5px #FFFFCC;
-}
-.moeda {
-    color: black;
-    margin-top: 6px;
-    padding-left: 3px;
-    margin: 5px;
-    border: 1px solid #aaa;
-    border-radius: 2px;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    transition: all .4s ease;
-}
-.moeda:focus{
-	border: 1px solid #CC9933;
-	box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .4), 0 0 0 5px #FFFFCC;
-}
-.textBox {
-    color: black;
-    margin-top: 6px;
-	padding-left: 3px;
-	margin: 5px;
-	border: 1px solid #aaa;
-	border-radius: 2px;
-	-webkit-transition: all .4s ease;
-	-moz-transition: all .4s ease;
-	transition: all .4s ease;    
-}
-.textBox:focus{
-	border: 1px solid #CC9933;
-	box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .4), 0 0 0 5px #FFFFCC;
-}
-
-
-.dropDownList {
-    color: black;
-	padding-left: 3px;
-	margin-top: 6px;
-	margin-left: 5px;
-	border: 1px solid #aaa;
-	border-radius: 2px;	
-	-webkit-transition: all .4s ease;
-	-moz-transition: all .4s ease;
-	transition: all .4s ease;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    }
-.dropDownList:focus{
-	border: 1px solid #CC9933;
-	box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .4), 0 0 0 5px #FFFFCC;
-}
-
-.chkboxlist td{
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-   	color: #777;
-}
-
 input[type="checkbox"]:focus {
     border: 1px solid #CC9933;
 	box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .4), 0 0 0 5px #FFFFCC;
@@ -131,7 +88,7 @@ input[type="checkbox"]:focus {
 	font-weight: bold;
     text-decoration:none;
 	color: #333333;
-    border-radius: 5px;
+    border-radius: 4px;
 	border: 1px solid #aaa;	
 	cursor: pointer;
     Height:30px;
@@ -149,57 +106,44 @@ background-image: -o-linear-gradient(#ebe9e9, #aaa);
 background-image: -ms-linear-gradient(#ebe9e9, #aaa);
 background-image: linear-gradient(#ebe9e9, #aaa);
 }
- .botao {
-            margin-right: 20px;
-            margin-top: 20px;
-            font-size: 14px;
-            font-weight: bold;
-            text-decoration: none;
-            color: #333333;
-            border-radius: 5px;
-            border: 1px solid #aaa;
-            cursor: pointer;
-            Height:30px;
-    <!-- width: 29px;-->
+
+
+.center{
+	text-align: center;
 }
 
-            .botao:focus {
-                border: 1px solid #CC9933;
-                box-shadow: inset 0 1.5px 3px rgba(254, 191, 2, .4), 0 0 0 5px #FFFFCC;
-            }
-
-            .botao:hover {
-                background-color: #ebe9e9;
-                background-image: -moz-linear-gradient(#ebe9e9, #aaa);
-                background-image: -webkit-gradient(linear, left top, left bottom, from(#ebe9e9), to(#aaa));
-                background-image: -webkit-linear-gradient(#ebe9e9, #aaa);
-                background-image: -o-linear-gradient(#ebe9e9, #aaa);
-                background-image: -ms-linear-gradient(#ebe9e9, #aaa);
-                background-image: linear-gradient(#ebe9e9, #aaa);
-            }
-#TituloPage {
-	padding: 4px 2px;   
-    color: #fff;   
-    background: #424242 url('../Img/grd_head.png') repeat-x 50% top;   
-       
-    font-size: 0.9em;
-    width: 961px;
+.button {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  
 }
 
-#ConteudoPages {   
-    padding-bottom: 25px;
-    border: 1px solid #aaa;
-       
+.button:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
 
-/*Rodapé das páginas do sistema*/
-#footer {
-    margin-top: 50px;
-	background-image: url(img/footer_bg.png);
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-}
-.validaDados {
-    color:#FF0000;
+.button:hover,
+.button:focus {
+  color: #333333;
+  text-decoration: none;
 }
 
+.button:active,
+.button.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
