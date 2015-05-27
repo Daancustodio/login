@@ -21,15 +21,17 @@ class ViewAccess {
         <html lang="pt-br">
             <head>
                 <meta charset="UTF-8">
-                <title>Cadastro</title>
-        	<link rel="stylesheet" href="../css/style.css" >
+                <title>Controle de Aprovação</title>
         	<link rel="stylesheet" href="../css/Styles.css" >
-        	<link rel="stylesheet" href="../css/LogIn.css" >
-                <script src="../js/jquery-2.1.4.min.js"></script>
+        	<script src="../js/jquery-2.1.4.min.js"></script>
+            <style type="text/css">
+            html{
+            background-color: #DBFFFF;
+            }
+            </style>
             </head>
             <body>
-        <div id="container">';
-        
+        <div class="form" >';        
         return $header;
     }
     public static function CriarTabelaAprovacoes(User $userLoged, $arrayOfUsers){
@@ -37,7 +39,7 @@ class ViewAccess {
             $thead = '<table>
                     <caption>Controle de aprocação</caption>
                     <thead>
-                        <tr>
+                    <tr>
                             <th>Login</th>
                             <th>Nome</th>
                             <th>Aprovar</th>
@@ -52,9 +54,9 @@ class ViewAccess {
                 $body = $body . '<tr>
 			<td>' .  $user["login"]  . '</td>
 			<td>' .  $user["nome"]  . '</td>
-			<td><a href="?action=aprovar&id=' . $user["id"] . '">Aprovar</a></td>
-			<td><a href="?action=aprovarGerente&id=' . $user["id"] . '">Aprovar</a></td>
-			<td><a href="?action=aprovarAdm&id=' . $user["id"] . '">Aprovar</a></td>
+			<td style="text-align: center"><a href="?action=aprovar&id=' . $user["id"] . '">Aprovar</a></td>
+			<td style="text-align: center"><a href="?action=aprovarGerente&id=' . $user["id"] . '">Aprovar</a></td>
+			<td style="text-align: center"><a href="?action=aprovarAdm&id=' . $user["id"] . '">Aprovar</a></td>
 		</tr>
                 ';
             }
@@ -77,7 +79,7 @@ class ViewAccess {
                 $body = $body . '<tr>
 			<td>' .  $user["login"]  . '</td>
 			<td>' .  $user["nome"]  . '</td>
-			<td><a href="?action=aprovar&id=' . $user["id"] . '">Aprovar</a></td>			
+			<td style="text-align: center"><a href="?action=aprovar&id=' . $user["id"] . '">Aprovar</a></td>			
 		</tr>
                 ';
             }
