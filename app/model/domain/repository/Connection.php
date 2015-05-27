@@ -13,7 +13,7 @@ class Connection {
 
     private static $server = 'localhost';
     private static $user = 'root';
-    private static $pass = '';
+    private static $pass = '1234';
     private static $db = 'login';
     private static $con;
 

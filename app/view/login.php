@@ -20,9 +20,15 @@ if (isset($_GET['action']) && $_GET['action'] == 'acessar') {
 <head>
 	<meta charset="UTF-8">
 	<title>Login</title>
+<<<<<<< HEAD
 	<link rel="stylesheet" href="../css/Styles.css" >
 	<link rel="stylesheet" href="../css/LogIn.css" >
     
+=======
+	<link rel="stylesheet" href="http://localhost:81/login-master/app/css/style.css" >
+	<link rel="stylesheet" href="http://localhost:81/login-master/app/css/Styles.css" >
+	<link rel="stylesheet" href="http://localhost:81/login-master/app/css/LogIn.css" >
+>>>>>>> origin/master
 </head>
     <style type="text/css">
        
@@ -45,6 +51,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'acessar') {
 	<h3>Login</h3>
 	<form action="?action=acessar" method="post" style="margin-left:18px;" id="form">
 		<p>
+<<<<<<< HEAD
 			Usuario:<input type="text" id="usuario" name="login" required />
 		</p>
 		<p>
@@ -53,6 +60,16 @@ if (isset($_GET['action']) && $_GET['action'] == 'acessar') {
 		<input type="submit" name="entrar" value="Entrar" width="150px" class="button">
 	</form>
 	<a href="cadastro.php" title="Cadastre-se" class="button" style="float:left; height:15px; margin-left:18px;">Cadastre-se</a>
+=======
+			Usuario:<br /><input type="text" id="usuario" name="login" />
+		</p>
+		<p>
+			Senha:<br /><input type="password" id="senha" name="senha">
+		</p>
+		<input type="submit" name="entrar" value="Entrar" width="150px" class="button">
+	</form>
+	<a href="cadastro.php" title="Cadastre-se" class="button" style="float:left; height:15px;">Cadastre-se</a>
+>>>>>>> origin/master
 </div>
 	
 </body>

@@ -106,6 +106,22 @@ background-image: -o-linear-gradient(#ebe9e9, #aaa);
 background-image: -ms-linear-gradient(#ebe9e9, #aaa);
 background-image: linear-gradient(#ebe9e9, #aaa);
 }
+<<<<<<< HEAD
+=======
+ .botao {
+            margin-right: 20px;
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333333;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+            cursor: pointer;
+            Height:30px;
+    <!-- width: 29px;-->
+}
+>>>>>>> origin/master
 
 
 .center{

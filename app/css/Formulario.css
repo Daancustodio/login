@@ -4,7 +4,11 @@ body {
     color: #777;
 }
 
+<<<<<<< HEAD
 #container1 {
+=======
+#container {
+>>>>>>> origin/master
     color: black;
     position: fixed;
     width: 450px;

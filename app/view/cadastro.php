@@ -22,6 +22,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'cadastrar') {
     <head>
         <meta charset="UTF-8">
         <title>Cadastro</title>
+<<<<<<< HEAD
 		<link rel="stylesheet" href="../css/style.css" >
 	<link rel="stylesheet" href="../css/Styles.css" >
 	<link rel="stylesheet" href="../css/LogIn.css" >
@@ -38,6 +39,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'cadastrar') {
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
         }
         </style>
+=======
+		<link rel="stylesheet" href="http://localhost:81/login-master/app/css/style.css" >
+	<link rel="stylesheet" href="http://localhost:81/login-master/app/css/Styles.css" >
+	<link rel="stylesheet" href="http://localhost:81/login-master/app/css/LogIn.css" >
+>>>>>>> origin/master
     </head>
     <body>
 
@@ -57,9 +63,15 @@ if (isset($_GET['action']) && $_GET['action'] == 'cadastrar') {
                 <p>
                     Confirmar Senha:<br /><input type="password" id="confirmacao" name="confirmacao" class="text" required>
                 </p>
+<<<<<<< HEAD
                 <input type="submit" name="cadastrar" value="Cadastrar" class="button">
             </form>
             <a href="login.php" title="Acessar" class="button" style="float:left; height:15px; margin-left:18px;">Acessar</a>
+=======
+                <input type="submit" name="cadastrar" value="Cadastrar" class="button" >
+            </form>
+            <a href="login.php" title="Acessar" class="button" style="float:left; height:15px;">Acessar</a>
+>>>>>>> origin/master
         </div>
 
     </body>
