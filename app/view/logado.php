@@ -25,7 +25,7 @@ function CreateTable($session){
     if (count($users)){        
         echo ViewAccess::CriarTabelaAprovacoes($session, $users);
     }else{
-        echo '<h1>Não existem cadastro pendentes de aprovação</h1>';
+        echo '<h1>Não existem cadastro pendentes de aprovação';
     }    
     echo ViewAccess::GetFooter();
    
