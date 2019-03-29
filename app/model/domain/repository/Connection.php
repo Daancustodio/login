@@ -11,10 +11,10 @@ use \mysqli;
 
 class Connection {
 
-    private static $server = '2bb9ac6f-09ff-4ac2-b45a-a610012fa711.sqlserver.sequelizer.com';
-    private static $user = 'zaopgjescqbcvkro';
-    private static $pass = 'S3QJ7Ad7WACWWNe2nxQU5PGqM75FxwohEzHbXsfC6LWVZu3AJj3zP5Lduz58EEGy';
-    private static $db = 'login';
+    private static $server = 'dd4e8bb8-6420-4df6-9006-aa1f018470b1.mysql.sequelizer.com';
+    private static $user = 'ijikuhrjckqyjbuu';
+    private static $pass = 'eoVisiBxNRtfX28fPdw74tTrXNvikWHHtFW2Na4k36Se6JHkyHrtPX2TCDtLUtnY';
+    private static $db = 'dbdd4e8bb864204df69006aa1f018470b1';
     private static $con;
 
     private function __construct() {
