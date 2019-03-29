@@ -11,9 +11,9 @@ use \mysqli;
 
 class Connection {
 
-    private static $server = 'localhost';
-    private static $user = 'root';
-    private static $pass = '';
+    private static $server = '2bb9ac6f-09ff-4ac2-b45a-a610012fa711.sqlserver.sequelizer.com';
+    private static $user = 'zaopgjescqbcvkro';
+    private static $pass = 'S3QJ7Ad7WACWWNe2nxQU5PGqM75FxwohEzHbXsfC6LWVZu3AJj3zP5Lduz58EEGy';
     private static $db = 'login';
     private static $con;
 
